@@ -1,0 +1,11 @@
+#IMPORT LIBRARIES
+library(flexdashboard)
+library(knitr)
+library(highcharter)
+library(dplyr)
+library(ggplot2)
+library(tidyverse)
+library(scales)
+library(hrbrthemes)
+library(lubridate)
+library(tidyr)
