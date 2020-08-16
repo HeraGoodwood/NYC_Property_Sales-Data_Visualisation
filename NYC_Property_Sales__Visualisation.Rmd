@@ -1,0 +1,1400 @@
+---
+title: "NYC_Property_Sales Data"
+author: "@Vishwareeta"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    vertical_layout: scroll
+    smooth_scroll: true
+---
+
+```{r setup, include=FALSE}
+source("Import.R")
+source("CodeFor2014.R")
+source("CodeFor2015.R")
+source("CodeFor2016.R")
+source("CodeFor2017.R")
+source("CodeFor2018.R")
+source("CodeFor14To18.R")
+```
+
+2014
+=======================================================================
+Row
+-----------------------------------------------------------------------
+
+### Yearly Sales
+
+```{r fig.height = 5, fig.width = 10}
+Monthly2014 %>%
+  hchart("line", hcaes(x = Month, y = Total_Sales),color="red")
+```
+
+Row {.tabset}
+-----------------------------------------------------------------------
+
+### JAN
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2014[sales_by_week2014$month==1,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### FEB
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2014[sales_by_week2014$month==2,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### MAR
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2014[sales_by_week2014$month==3,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### APR
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2014[sales_by_week2014$month==4,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### MAY
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2014[sales_by_week2014$month==5,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### JUN
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2014[sales_by_week2014$month==6,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### JUL
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2014[sales_by_week2014$month==7,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### AUG
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2014[sales_by_week2014$month==8,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### SEP
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2014[sales_by_week2014$month==9,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### OCT
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2014[sales_by_week2014$month==10,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### NOV
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2014[sales_by_week2014$month==11,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### DEC
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2014[sales_by_week2014$month==12,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+
+2014
+=======================================================================
+Row
+-----------------------------------------------------------------------
+
+### TRANSFER OF PROPERTY OWNERSHIP WITHOUT CASH CONSIDERATION
+
+```{r}
+articles <- Nul2014
+valueBox(articles, icon = "fa-pencil")
+```
+
+### TOTAL DATA OBSERVATIONS
+
+```{r}
+articles <- Total2014
+valueBox(articles, icon = "fa-pencil")
+```
+
+Row 
+-----------------------------------------------------------------------
+
+### BOROUGH
+
+```{r}
+Borough2014 %>%
+  hchart("pie", hcaes(x = Borough, y = Total_Sales))
+```
+
+### TAX CLASS AT THE PRESENT
+
+```{r}
+TaxPres2014 %>%
+  hchart("column", hcaes(x = Tax_At_Present, y = Total_Sales),color = "blue", borderColor = "black")
+```
+
+### YEAR BUILT
+
+```{r}
+Year2014 %>%
+  hchart("pie", hcaes(x = Year_Built, y = Total_Sales))
+```
+
+Row 
+-----------------------------------------------------------------------
+
+### EASEMENT
+
+```{r}
+Ease2014 %>%
+  hchart(
+    "column", hcaes(x = Easement, y = Total_Sales),color = "blue", borderColor = "black")
+```
+
+### ZIP CODE
+
+```{r}
+Zip2014 %>%
+  hchart(
+    "pie", hcaes(x = Zipcode, y = Total_Sales))
+```
+
+### THE TOP 10 NEIGHBORHOODS
+
+```{r}
+Nei2014 %>%
+  hchart("column", hcaes(x = Neighborhood, y = Total_Sales),color = "violet", borderColor = "black")
+```
+
+Row 
+-----------------------------------------------------------------------
+
+### THE TOP 10 BUILDING CLASS EARLIER
+
+```{r}
+Bui2014 %>%
+  hchart("column", hcaes(x = Building_Class_Category, y = Total_Sales),color = "Pink", borderColor = "black")
+```
+
+### TAX CLASS AT SALES TIME
+
+```{r}
+Tax2014 %>%
+  hchart("column", hcaes(x = Tax_Class_Category, y = Total_Sales),color = "orange", borderColor = "black")
+```
+
+### THE TOP 10 BUILDING CLASS AT SALES TIME
+
+```{r}
+BuiSales2014 %>%
+  hchart("column", hcaes(x = Building_Class_Category, y = Total_Sales),color = "pink", borderColor = "black")
+```
+
+Row 
+-----------------------------------------------------------------------
+
+### THE TOP 10 RESIDENTAL UNITS
+
+```{r}
+Res2014 %>%
+  hchart("column", hcaes(x = Residental_units, y = Total_Sales),color = "yellow", borderColor = "black")
+```
+
+### THE TOP 10 COMMERCIAL UNITS
+
+```{r}
+Com2014 %>%
+  hchart("column", hcaes(x = Commercial_units, y = Total_Sales),color = "violet", borderColor = "black")
+```
+
+### THE TOP 10 TOTAL UNITS
+
+```{r}
+Tot2014 %>%
+  hchart("column", hcaes(x = Total_units, y = Total_Sales),color = "yellow", borderColor = "black")
+```
+
+Row 
+-----------------------------------------------------------------------
+
+### THE TOP 10 LAND SQUARE FEET
+
+```{r}
+Lan2014 %>%
+  hchart("column", hcaes(x = Land_Square_Feet, y = Total_Sales),color = "pink", borderColor = "black")
+```
+
+### THE TOP 10 GROSS SQUARE FEET
+
+```{r}
+Gro2014 %>%
+  hchart("column", hcaes(x = Gross_Square_Feet, y = Total_Sales),color = "orange", borderColor = "black")
+```
+
+
+2015
+=======================================================================
+Row
+-----------------------------------------------------------------------
+
+### Yearly Sales
+
+```{r fig.height = 5, fig.width = 10}
+Monthly2015 %>%
+  hchart("line", hcaes(x = Month, y = Total_Sales),color="red")
+```
+
+Row {.tabset}
+-----------------------------------------------------------------------
+
+### JAN
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2015[sales_by_week2015$month==1,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### FEB
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2015[sales_by_week2015$month==2,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### MAR
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2015[sales_by_week2015$month==3,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### APR
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2015[sales_by_week2015$month==4,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### MAY
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2015[sales_by_week2015$month==5,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### JUN
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2015[sales_by_week2015$month==6,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### JUL
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2015[sales_by_week2015$month==7,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### AUG
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2015[sales_by_week2015$month==8,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### SEP
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2015[sales_by_week2015$month==9,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### OCT
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2015[sales_by_week2015$month==10,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### NOV
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2015[sales_by_week2015$month==11,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### DEC
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2015[sales_by_week2015$month==12,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+
+2015
+=======================================================================
+Row
+-----------------------------------------------------------------------
+
+### TRANSFER OF PROPERTY OWNERSHIP WITHOUT CASH CONSIDERATION
+
+```{r}
+articles <- Nul2015
+valueBox(articles, icon = "fa-pencil")
+```
+
+### TOTAL DATA OBSERVATIONS
+
+```{r}
+articles <- Total2015
+valueBox(articles, icon = "fa-pencil")
+```
+
+Row 
+-----------------------------------------------------------------------
+
+### BOROUGH
+
+```{r}
+Borough2015 %>%
+  hchart("pie", hcaes(x = Borough, y = Total_Sales))
+```
+
+### TAX CLASS AT THE PRESENT
+
+```{r}
+TaxPres2015 %>%
+  hchart("column", hcaes(x = Tax_At_Present, y = Total_Sales),color = "blue", borderColor = "black")
+```
+
+### YEAR BUILT
+
+```{r}
+Year2015 %>%
+  hchart("pie", hcaes(x = Year_Built, y = Total_Sales))
+```
+
+Row 
+-----------------------------------------------------------------------
+
+### EASEMENT
+
+```{r}
+Ease2015 %>%
+  hchart(
+    "column", hcaes(x = Easement, y = Total_Sales),color = "blue", borderColor = "black")
+```
+
+### ZIP CODE
+
+```{r}
+Zip2015 %>%
+  hchart(
+    "pie", hcaes(x = Zipcode, y = Total_Sales))
+```
+
+### THE TOP 10 NEIGHBORHOODS
+
+```{r}
+Nei2015 %>%
+  hchart("column", hcaes(x = Neighborhood, y = Total_Sales),color = "violet", borderColor = "black")
+```
+
+Row 
+-----------------------------------------------------------------------
+
+### THE TOP 10 BUILDING CLASS EARLIER
+
+```{r}
+Bui2015 %>%
+  hchart("column", hcaes(x = Building_Class_Category, y = Total_Sales),color = "Pink", borderColor = "black")
+```
+
+### TAX CLASS AT SALES TIME
+
+```{r}
+Tax2015 %>%
+  hchart("column", hcaes(x = Tax_Class_Category, y = Total_Sales),color = "orange", borderColor = "black")
+```
+
+### THE TOP 10 BUILDING CLASS AT SALES TIME
+
+```{r}
+BuiSales2015 %>%
+  hchart("column", hcaes(x = Building_Class_Category, y = Total_Sales),color = "pink", borderColor = "black")
+```
+
+Row 
+-----------------------------------------------------------------------
+
+### THE TOP 10 RESIDENTAL UNITS
+
+```{r}
+Res2015 %>%
+  hchart("column", hcaes(x = Residental_units, y = Total_Sales),color = "yellow", borderColor = "black")
+```
+
+### THE TOP 10 COMMERCIAL UNITS
+
+```{r}
+Com2015 %>%
+  hchart("column", hcaes(x = Commercial_units, y = Total_Sales),color = "violet", borderColor = "black")
+```
+
+### THE TOP 10 TOTAL UNITS
+
+```{r}
+Tot2015 %>%
+  hchart("column", hcaes(x = Total_units, y = Total_Sales),color = "yellow", borderColor = "black")
+```
+
+Row 
+-----------------------------------------------------------------------
+
+### THE TOP 10 LAND SQUARE FEET
+
+```{r}
+Lan2015 %>%
+  hchart("column", hcaes(x = Land_Square_Feet, y = Total_Sales),color = "pink", borderColor = "black")
+```
+
+### THE TOP 10 GROSS SQUARE FEET
+
+```{r}
+Gro2015 %>%
+  hchart("column", hcaes(x = Gross_Square_Feet, y = Total_Sales),color = "orange", borderColor = "black")
+```
+
+
+2016
+=======================================================================
+Row
+-----------------------------------------------------------------------
+
+### Yearly Sales
+
+```{r fig.height = 5, fig.width = 10}
+Monthly2016 %>%
+  hchart("line", hcaes(x = Month, y = Total_Sales),color="red")
+```
+
+Row {.tabset}
+-----------------------------------------------------------------------
+
+### JAN
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2016[sales_by_week2016$month==1,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### FEB
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2016[sales_by_week2016$month==2,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### MAR
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2016[sales_by_week2016$month==3,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### APR
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2016[sales_by_week2016$month==4,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### MAY
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2016[sales_by_week2016$month==5,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### JUN
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2016[sales_by_week2016$month==6,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### JUL
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2016[sales_by_week2016$month==7,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### AUG
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2016[sales_by_week2016$month==8,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### SEP
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2016[sales_by_week2016$month==9,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### OCT
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2016[sales_by_week2016$month==10,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### NOV
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2016[sales_by_week2016$month==11,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### DEC
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2016[sales_by_week2016$month==12,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+
+2016
+=======================================================================
+Row
+-----------------------------------------------------------------------
+
+### TRANSFER OF PROPERTY OWNERSHIP WITHOUT CASH CONSIDERATION
+
+```{r}
+articles <- Nul2016
+valueBox(articles, icon = "fa-pencil")
+```
+
+### TOTAL DATA OBSERVATIONS
+
+```{r}
+articles <- Total2016
+valueBox(articles, icon = "fa-pencil")
+```
+
+Row 
+-----------------------------------------------------------------------
+
+### BOROUGH
+
+```{r}
+Borough2016 %>%
+  hchart("pie", hcaes(x = Borough, y = Total_Sales))
+```
+
+### TAX CLASS AT THE PRESENT
+
+```{r}
+TaxPres2016 %>%
+  hchart("column", hcaes(x = Tax_At_Present, y = Total_Sales),color = "blue", borderColor = "black")
+```
+
+### YEAR BUILT
+
+```{r}
+Year2016 %>%
+  hchart("pie", hcaes(x = Year_Built, y = Total_Sales))
+```
+
+Row 
+-----------------------------------------------------------------------
+
+### EASEMENT
+
+```{r}
+Ease2016 %>%
+  hchart(
+    "column", hcaes(x = Easement, y = Total_Sales),color = "blue", borderColor = "black")
+```
+
+### ZIP CODE
+
+```{r}
+Zip2016 %>%
+  hchart(
+    "pie", hcaes(x = Zipcode, y = Total_Sales))
+```
+
+### THE TOP 10 NEIGHBORHOODS
+
+```{r}
+Nei2016 %>%
+  hchart("column", hcaes(x = Neighborhood, y = Total_Sales),color = "violet", borderColor = "black")
+```
+
+Row 
+-----------------------------------------------------------------------
+
+### THE TOP 10 BUILDING CLASS EARLIER
+
+```{r}
+Bui2016 %>%
+  hchart("column", hcaes(x = Building_Class_Category, y = Total_Sales),color = "Pink", borderColor = "black")
+```
+
+### TAX CLASS AT SALES TIME
+
+```{r}
+Tax2016 %>%
+  hchart("column", hcaes(x = Tax_Class_Category, y = Total_Sales),color = "orange", borderColor = "black")
+```
+
+### THE TOP 10 BUILDING CLASS AT SALES TIME
+
+```{r}
+BuiSales2016 %>%
+  hchart("column", hcaes(x = Building_Class_Category, y = Total_Sales),color = "pink", borderColor = "black")
+```
+
+Row 
+-----------------------------------------------------------------------
+
+### THE TOP 10 RESIDENTAL UNITS
+
+```{r}
+Res2016 %>%
+  hchart("column", hcaes(x = Residental_units, y = Total_Sales),color = "yellow", borderColor = "black")
+```
+
+### THE TOP 10 COMMERCIAL UNITS
+
+```{r}
+Com2016 %>%
+  hchart("column", hcaes(x = Commercial_units, y = Total_Sales),color = "violet", borderColor = "black")
+```
+
+### THE TOP 10 TOTAL UNITS
+
+```{r}
+Tot2016 %>%
+  hchart("column", hcaes(x = Total_units, y = Total_Sales),color = "yellow", borderColor = "black")
+```
+
+Row 
+-----------------------------------------------------------------------
+
+### THE TOP 10 LAND SQUARE FEET
+
+```{r}
+Lan2016 %>%
+  hchart("column", hcaes(x = Land_Square_Feet, y = Total_Sales),color = "pink", borderColor = "black")
+```
+
+### THE TOP 10 GROSS SQUARE FEET
+
+```{r}
+Gro2016 %>%
+  hchart("column", hcaes(x = Gross_Square_Feet, y = Total_Sales),color = "orange", borderColor = "black")
+```
+
+
+
+2017
+=======================================================================
+Row
+-----------------------------------------------------------------------
+
+### Yearly Sales
+
+```{r fig.height = 5, fig.width = 10}
+Monthly2017 %>%
+  hchart("line", hcaes(x = Month, y = Total_Sales),color="red")
+```
+
+Row {.tabset}
+-----------------------------------------------------------------------
+
+### JAN
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2017[sales_by_week2017$month==1,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### FEB
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2017[sales_by_week2017$month==2,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### MAR
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2017[sales_by_week2017$month==3,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### APR
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2017[sales_by_week2017$month==4,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### MAY
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2017[sales_by_week2017$month==5,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### JUN
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2017[sales_by_week2017$month==6,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### JUL
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2017[sales_by_week2017$month==7,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### AUG
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2017[sales_by_week2017$month==8,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### SEP
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2017[sales_by_week2017$month==9,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### OCT
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2017[sales_by_week2017$month==10,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### NOV
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2017[sales_by_week2017$month==11,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### DEC
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2017[sales_by_week2017$month==12,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+
+2017
+=======================================================================
+Row
+-----------------------------------------------------------------------
+
+### TRANSFER OF PROPERTY OWNERSHIP WITHOUT CASH CONSIDERATION
+
+```{r}
+articles <- Nul2017
+valueBox(articles, icon = "fa-pencil")
+```
+
+### TOTAL DATA OBSERVATIONS
+
+```{r}
+articles <- Total2017
+valueBox(articles, icon = "fa-pencil")
+```
+
+Row 
+-----------------------------------------------------------------------
+
+### BOROUGH
+
+```{r}
+Borough2017 %>%
+  hchart("pie", hcaes(x = Borough, y = Total_Sales))
+```
+
+### TAX CLASS AT THE PRESENT
+
+```{r}
+TaxPres2017 %>%
+  hchart("column", hcaes(x = Tax_At_Present, y = Total_Sales),color = "blue", borderColor = "black")
+```
+
+### YEAR BUILT
+
+```{r}
+Year2017 %>%
+  hchart("pie", hcaes(x = Year_Built, y = Total_Sales))
+```
+
+Row 
+-----------------------------------------------------------------------
+
+### EASEMENT
+
+```{r}
+Ease2017 %>%
+  hchart(
+    "column", hcaes(x = Easement, y = Total_Sales),color = "blue", borderColor = "black")
+```
+
+### ZIP CODE
+
+```{r}
+Zip2017 %>%
+  hchart(
+    "pie", hcaes(x = Zipcode, y = Total_Sales))
+```
+
+### THE TOP 10 NEIGHBORHOODS
+
+```{r}
+Nei2017 %>%
+  hchart("column", hcaes(x = Neighborhood, y = Total_Sales),color = "violet", borderColor = "black")
+```
+
+Row 
+-----------------------------------------------------------------------
+
+### THE TOP 10 BUILDING CLASS EARLIER
+
+```{r}
+Bui2017 %>%
+  hchart("column", hcaes(x = Building_Class_Category, y = Total_Sales),color = "Pink", borderColor = "black")
+```
+
+### TAX CLASS AT SALES TIME
+
+```{r}
+Tax2017 %>%
+  hchart("column", hcaes(x = Tax_Class_Category, y = Total_Sales),color = "orange", borderColor = "black")
+```
+
+### THE TOP 10 BUILDING CLASS AT SALES TIME
+
+```{r}
+BuiSales2017 %>%
+  hchart("column", hcaes(x = Building_Class_Category, y = Total_Sales),color = "pink", borderColor = "black")
+```
+
+Row 
+-----------------------------------------------------------------------
+
+### THE TOP 10 RESIDENTAL UNITS
+
+```{r}
+Res2017 %>%
+  hchart("column", hcaes(x = Residental_units, y = Total_Sales),color = "yellow", borderColor = "black")
+```
+
+### THE TOP 10 COMMERCIAL UNITS
+
+```{r}
+Com2017 %>%
+  hchart("column", hcaes(x = Commercial_units, y = Total_Sales),color = "violet", borderColor = "black")
+```
+
+### THE TOP 10 TOTAL UNITS
+
+```{r}
+Tot2017 %>%
+  hchart("column", hcaes(x = Total_units, y = Total_Sales),color = "yellow", borderColor = "black")
+```
+
+Row 
+-----------------------------------------------------------------------
+
+### THE TOP 10 LAND SQUARE FEET
+
+```{r}
+Lan2017 %>%
+  hchart("column", hcaes(x = Land_Square_Feet, y = Total_Sales),color = "pink", borderColor = "black")
+```
+
+### THE TOP 10 GROSS SQUARE FEET
+
+```{r}
+Gro2017 %>%
+  hchart("column", hcaes(x = Gross_Square_Feet, y = Total_Sales),color = "orange", borderColor = "black")
+```
+
+
+
+2018
+=======================================================================
+Row
+-----------------------------------------------------------------------
+
+### Yearly Sales
+
+```{r fig.height = 5, fig.width = 10}
+Monthly2018 %>%
+  hchart("line", hcaes(x = Month, y = Total_Sales),color="red")
+```
+
+Row {.tabset}
+-----------------------------------------------------------------------
+
+### JAN
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2018[sales_by_week2018$month==1,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### FEB
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2018[sales_by_week2018$month==2,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### MAR
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2018[sales_by_week2018$month==3,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### APR
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2018[sales_by_week2018$month==4,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### MAY
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2018[sales_by_week2018$month==5,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### JUN
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2018[sales_by_week2018$month==6,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### JUL
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2018[sales_by_week2018$month==7,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### AUG
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2018[sales_by_week2018$month==8,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### SEP
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2018[sales_by_week2018$month==9,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### OCT
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2018[sales_by_week2018$month==10,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### NOV
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2018[sales_by_week2018$month==11,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+### DEC
+
+```{r fig.height = 5, fig.width = 10}
+ggplot((sales_by_week2018[sales_by_week2018$month==12,]),aes(x=week, y=Total_Sales)) +
+  geom_bar(stat="identity", color="blue", fill="white")+
+  theme(axis.text.x=element_text(angle=90,hjust=0.3))+
+  coord_flip()+
+  geom_text(aes(label=Total_Sales))
+```
+
+
+2018
+=======================================================================
+Row
+-----------------------------------------------------------------------
+
+### TRANSFER OF PROPERTY OWNERSHIP WITHOUT CASH CONSIDERATION
+
+```{r}
+articles <- Nul2018
+valueBox(articles, icon = "fa-pencil")
+```
+
+### TOTAL DATA OBSERVATIONS
+
+```{r}
+articles <- Total2018
+valueBox(articles, icon = "fa-pencil")
+```
+
+Row 
+-----------------------------------------------------------------------
+
+### BOROUGH
+
+```{r}
+Borough2018 %>%
+  hchart("pie", hcaes(x = Borough, y = Total_Sales))
+```
+
+### TAX CLASS AT THE PRESENT
+
+```{r}
+TaxPres2018 %>%
+  hchart("column", hcaes(x = Tax_At_Present, y = Total_Sales),color = "blue", borderColor = "black")
+```
+
+### YEAR BUILT
+
+```{r}
+Year2018 %>%
+  hchart("pie", hcaes(x = Year_Built, y = Total_Sales))
+```
+
+Row 
+-----------------------------------------------------------------------
+
+### EASEMENT
+
+```{r}
+Ease2018 %>%
+  hchart(
+    "column", hcaes(x = Easement, y = Total_Sales),color = "blue", borderColor = "black")
+```
+
+### ZIP CODE
+
+```{r}
+Zip2018 %>%
+  hchart(
+    "pie", hcaes(x = Zipcode, y = Total_Sales))
+```
+
+### THE TOP 10 NEIGHBORHOODS
+
+```{r}
+Nei2018 %>%
+  hchart("column", hcaes(x = Neighborhood, y = Total_Sales),color = "violet", borderColor = "black")
+```
+
+Row 
+-----------------------------------------------------------------------
+
+### THE TOP 10 BUILDING CLASS EARLIER
+
+```{r}
+Bui2018 %>%
+  hchart("column", hcaes(x = Building_Class_Category, y = Total_Sales),color = "Pink", borderColor = "black")
+```
+
+### TAX CLASS AT SALES TIME
+
+```{r}
+Tax2018 %>%
+  hchart("column", hcaes(x = Tax_Class_Category, y = Total_Sales),color = "orange", borderColor = "black")
+```
+
+### THE TOP 10 BUILDING CLASS AT SALES TIME
+
+```{r}
+BuiSales2018 %>%
+  hchart("column", hcaes(x = Building_Class_Category, y = Total_Sales),color = "pink", borderColor = "black")
+```
+
+Row 
+-----------------------------------------------------------------------
+
+### THE TOP 10 RESIDENTAL UNITS
+
+```{r}
+Res2018 %>%
+  hchart("column", hcaes(x = Residental_units, y = Total_Sales),color = "yellow", borderColor = "black")
+```
+
+### THE TOP 10 COMMERCIAL UNITS
+
+```{r}
+Com2018 %>%
+  hchart("column", hcaes(x = Commercial_units, y = Total_Sales),color = "violet", borderColor = "black")
+```
+
+### THE TOP 10 TOTAL UNITS
+
+```{r}
+Tot2018 %>%
+  hchart("column", hcaes(x = Total_units, y = Total_Sales),color = "yellow", borderColor = "black")
+```
+
+Row 
+-----------------------------------------------------------------------
+
+### THE TOP 10 LAND SQUARE FEET
+
+```{r}
+Lan2018 %>%
+  hchart("column", hcaes(x = Land_Square_Feet, y = Total_Sales),color = "pink", borderColor = "black")
+```
+
+### THE TOP 10 GROSS SQUARE FEET
+
+```{r}
+Gro2018 %>%
+  hchart("column", hcaes(x = Gross_Square_Feet, y = Total_Sales),color = "orange", borderColor = "black")
+```
+
+
+
+2014-2018
+=======================================================================
+Row
+-----------------------------------------------------------------------
+
+### TOTAL SALES BY YEAR
+
+```{r fig.height = 5, fig.width = 10}
+Monthly %>% select(Sales2014,Sales2015,Sales2016,Sales2017,Sales2018,Month) %>% 
+  gather("key", "value", Sales2014,Sales2015,Sales2016,Sales2017,Sales2018) %>%
+  hchart(type='line', hcaes(x='Month', y='value', group='key'))
+```
+
+Row
+-----------------------------------------------------------------------
+
+### TOTAL SALES FROM 2014 TO 2018
+
+```{r fig.height = 5, fig.width = 10}
+Yearly %>%
+  hchart("line", hcaes(x = YearMonth, y = Total_Sales),color="red")
+```
